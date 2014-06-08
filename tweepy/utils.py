@@ -6,7 +6,10 @@ from datetime import datetime
 import time
 import re
 import locale
-from urllib import quote
+try:
+    from urllib import quote
+except ImportError:
+    from urllib.parse import quote
 from email.utils import parsedate
 
 
